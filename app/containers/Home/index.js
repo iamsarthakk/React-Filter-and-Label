@@ -25,10 +25,10 @@ export function Home() {
   return (
     <div className="Home">
       <Link to="/filter" className="Home__link">
-        Filtered Calls
+        Part1 - Filter 
       </Link>
       <Link to="/label" className="Home__link">
-        Label Calls
+        Part2 - Label
       </Link>
     </div>
   );
