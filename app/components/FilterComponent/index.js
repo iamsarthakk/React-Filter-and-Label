@@ -36,6 +36,7 @@ function FilterComponent() {
   //   className = "FilteredCalls FilteredCalls--sidebar";
   // }
   const [Agents, setAgents] = useState([]);
+  const [duration, setDuration] = useState({min_duration: 0, max_duration: 10});
   const [isLoading, setLoading] = useState(true);
   if(isLoading){
     function listOfAgents() {
@@ -46,7 +47,7 @@ function FilterComponent() {
           (result) => {
             setAgents(result.data.listofagents); 
             // console.log(result.data);
-            setLoading(false);
+           
           }
         )
     }
@@ -55,17 +56,12 @@ function FilterComponent() {
         .then(res => res.json())
         .then(
           (result) => {
-            this.setState({
-              isLoaded: true,
+            const tempduration = {
               min_duration: result.data.minimum,
               max_duration: result.data.maximum,
-            });
-          },
-          (error) => {
-            this.setState({
-              isLoaded: true,
-              error
-            });
+            } 
+            setDuration(tempduration);
+            setLoading(false);
           }
         )
     }
@@ -98,7 +94,7 @@ function FilterComponent() {
               <div className="FilteredCalls__criteria-title">
                 Select duration
               </div>
-              <DurationRange />
+              <DurationRange minDuration = {duration.min_duration} maxDuration = {duration.max_duration}/>
             </div>
           </div>
           <div className="FilteredCalls__actions">
