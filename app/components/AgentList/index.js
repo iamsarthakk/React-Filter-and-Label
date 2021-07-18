@@ -5,31 +5,10 @@
  */
 
 import React, {useEffect, useState} from 'react';
-// import PropTypes from 'prop-types';
-// import styled from 'styled-components';
 
 import { Select } from 'antd';
 
-import { FormattedMessage } from 'react-intl';
-import messages from './messages';
-
 const { Option } = Select;
-
-function createOptions(agents) {
-  const  Agents  = Array.from(agents);
-  return Agents.map(agent => {
-    return {
-      key: agent,
-      text: agent,
-      value: agent
-    };
-  });
-}
-
-function onAgentSelection(data) {
-  console.log(value);
-    console.log(typeof value);
-}
 
 
 const AgentList = props => {

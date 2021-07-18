@@ -12,21 +12,6 @@ import { FormattedMessage } from 'react-intl';
 import messages from './messages';
 import { InputNumber } from 'antd';
 
-// function newMinValue = (value) => {
-//   console.log("new min: " + value);
-//   this.setState({
-//     minimumDuration: value
-//   })
-//   this.props.parentCallback([value, this.state.maximumDuration])
-// }
-
-// function newMaxValue = (value) => {
-//   console.log("new max: " + value);
-//   this.setState({
-//     maximumDuration: value
-//   })
-//   this.props.parentCallback([this.state.minimumDuration, value])
-// }
 
 const DurationRange = props => {
   const [minimumDuration, setminimumDuration] = useState(props.minDuration);

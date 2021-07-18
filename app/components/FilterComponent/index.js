@@ -20,16 +20,6 @@ import FilteredDataList from '../FilteredDataList';
 // import getAgentList from '../Utils';
 
 
-function onAgentSelection(data) {
-  // setSelectedAgents(data);
-  // this.setState({ selectedAgents: data });
-  // this.setState({
-  //   enabled: this.isEnabled(data, this.state.selectedDuration)
-  // });
-}
-
-
-
 function FilterComponent() {
   // const { loading, error, calls, enabled } = this.state;
   // let className = "FilteredCalls";
