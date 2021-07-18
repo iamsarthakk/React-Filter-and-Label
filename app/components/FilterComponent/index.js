@@ -21,11 +21,7 @@ import FilteredDataList from '../FilteredDataList';
 
 
 function FilterComponent() {
-  // const { loading, error, calls, enabled } = this.state;
-  // let className = "FilteredCalls";
-  // if (loading || error || calls.length) {
-  //   className = "FilteredCalls FilteredCalls--sidebar";
-  // }
+
   const [Agents, setAgents] = useState([]);
   const [duration, setDuration] = useState({min_duration: 0, max_duration: 10});
   const [isLoading, setLoading] = useState(true);
@@ -34,8 +30,7 @@ function FilterComponent() {
   const [filtered_list, setfilteredlist] = useState([]);
 
   const agentListCallback = (childData) => {
-    // let temp = this.state.selected_agents;
-    // temp.push(childData);
+    
     setSelectedAgents(childData);
     console.log(selected_agents);
   };
@@ -51,7 +46,7 @@ function FilterComponent() {
         "filter_time_range": filter_time_range
         }
       }
-    // data.append("myjsonkey", JSON.stringify(payload));
+    
     fetch("https://damp-garden-93707.herokuapp.com/getfilteredcalls", {
         'Content-Type': 'application/json',
         method: 'POST',

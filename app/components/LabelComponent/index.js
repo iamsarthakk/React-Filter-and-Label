@@ -16,8 +16,6 @@ function LabelComponent() {
   const [callList, setCallList] = useState([]);
   const [labelList, setLabelList] = useState([]);
   const [isLoading, setLoading] = useState(true);
-  const [filteredList, setFilteredList] = useState([]);
-
   
   const labelChangeCallback = (call_id, labels) => {
     console.log(call_id);
