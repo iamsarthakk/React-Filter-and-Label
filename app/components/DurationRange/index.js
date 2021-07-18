@@ -34,9 +34,9 @@ const DurationRange = props => {
 
   return (
     <div> 
-				<InputNumber min={0} max={props.maxDuration ?props.maxDuration - 1 : 10} defaultValue={0} onChange={(value)=>{ setmaximumDuration(value)}} />
+				<InputNumber min={0} max={props.maxDuration ?props.maxDuration - 1 : 10} defaultValue={0} onChange={(value)=>{ setmaximumDuration(value); props.parentCallback([minimumDuration, value]);}} />
 				&nbsp;
-				<InputNumber min={props.minDuration ? props.minDuration + 1 : 0} defaultValue={10} onChange={(value)=>{ setminimumDuration(value);}} />
+				<InputNumber min={props.minDuration ? props.minDuration + 1 : 0} defaultValue={10} onChange={(value)=>{ setminimumDuration(value); props.parentCallback([value, maximumDuration]);}} />
 		</div>
   );
 }

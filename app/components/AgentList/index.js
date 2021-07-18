@@ -46,7 +46,8 @@ const AgentList = props => {
         style={{ width: '100%' }}
         placeholder="Select Agents"
         defaultValue={[]}
-        onChange={(data)=>{setSelectedAgents(data)}} >
+        onChange={(data)=>{setSelectedAgents(data);
+          props.parentCallback(data)}} >
           {agents && (agents.map(agent => {
             return <Option key={agent}>{agent}</Option>
           }))}
